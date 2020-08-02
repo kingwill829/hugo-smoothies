@@ -1,0 +1,23 @@
+
+	<header id="masthead">
+		<div class="container">
+			<div id="siteLogo" class="col-sm-3 col-md-3">
+				<a href="{{ "/" | relURL}}">
+					<img src="/images/example-logo.png" alt="{{.Site.Title}} Logo" />
+				</a>
+			</div>
+
+			<div class="col-sm-9 col-md-9">
+				<nav>
+					<ul>
+					    {{ range .Site.Menus.main }}
+					        <li>
+					            <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+					        </li>
+					    {{ end }}
+					</ul>
+				</nav>
+
+			</div>
+		<div>
+	</header>

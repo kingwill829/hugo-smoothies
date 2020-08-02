@@ -1,0 +1,19 @@
+#masthead {
+	padding:$baseline 10px;
+}
+#siteLogo {
+	text-align:center;
+}
+nav {
+	display:none;
+}
+@include media_query('tablet') {
+nav 
+	{
+	display:block;	
+	}
+	nav ul li {
+		display:inline-block;
+		margin:0px 20px;
+	}
+}

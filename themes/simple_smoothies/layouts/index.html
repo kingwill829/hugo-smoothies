@@ -1,0 +1,17 @@
+{{ define "main" }}
+<div class="col-md-12 marb_d">
+	<div class="standard-width--reading">
+		<h1 class="tac">Welcome to Simple Smoothies</h1>
+		{{ .Content }}
+	</div>
+</div>
+    {{ range (where .Site.RegularPages "Section" "recipes") }}
+        <div class="col-xs-6 col-sm-6 col-md-3 marb_d">
+        	<a href="{{.Permalink}}">
+        		<img src="/images/smoothie-image.png" class="marb_h" />
+        	</a>
+            <a href="{{.Permalink}}">{{.Title}}</a>
+        </div>
+    {{ end }}
+	
+{{ end }}

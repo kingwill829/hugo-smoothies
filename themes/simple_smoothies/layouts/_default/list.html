@@ -1,0 +1,8 @@
+{{ define "main" }}
+
+    {{ range .Pages }}
+        <li class="list">
+            <a href="{{.Permalink}}">{{.Title}}</a>
+        </li>
+    {{ end }}
+{{ end }}

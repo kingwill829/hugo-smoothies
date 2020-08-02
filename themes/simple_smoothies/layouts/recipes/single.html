@@ -1,0 +1,104 @@
+
+{{ define "main" }}
+	<script type="application/ld+json">
+	{
+	  "@context": "https://schema.org/", 
+	  "@type": "Recipe", 
+	  "name": "{{ .Title }}",
+	  "image": "/images/smoothie-image.png",
+	  "description": "{{ .Params.mainDescription }}",
+	  "keywords": [{{ range $i, $e := .Params.keywords }}{{ if $i }}, {{ end }}
+	  	{{ $e }}{{ end }}
+	  ],
+	  "author": {
+	    "@type": "Person",
+	    "name": "Will Ling"
+	  },
+	  "datePublished": "{{ .Date }}",
+	  "prepTime": "PT{{ .Params.prepTime}}M",
+	  "cookTime": "PT{{ .Params.cookTime }}M", 
+	  "totalTime": "PT{{ $prepTime := int .Params.prepTime}} {{ $cookTime := int .Params.cookTime }} {{ add $prepTime $cookTime }}M", 
+	  "recipeYield": "{{ .Params.Servings }}", 
+	  "nutrition": {
+	    "@type": "NutritionInformation",
+	    "calories": "{{ .Params.Nutrition.Calories }}",
+	    "fatContent": "{{ .Params.Nutrition.Fat }}"
+	  },
+	  "recipeIngredient": [{{ range $i, $e := .Params.ingredients }}{{ if $i }}, {{ end }}
+	  	{{ $e }}{{ end }}
+	  ],
+	  "recipeInstructions": [
+	  
+	  {{ $steps := .Params.steps }}
+	  {{ $len := len $steps }}
+	  {{ $counter := 1 }}
+	  {{ range $i, $e := .Params.steps}}
+	  {"@type": "HowToStep",
+	  	"text":"{{ .stepDescription}}"
+	  }{{ if (lt $counter $len) }},{{end}}{{ $counter = add $counter 1 }}{{end}}]  
+	}
+	</script>	
+
+		<div class="row">
+			<div class="col-md-6">
+				<img src="/images/smoothie-image.png" />
+			</div>
+
+			<div class="col-md-6">
+				<h1>{{ .Title }}</h1>
+				<p>{{ .Params.mainDescription }}</p>
+
+				<div class="recipe-summary">
+					<table>
+						<tr>
+							<th style="text-align:left; padding:8px 0px">Difficulty</th>
+							<td style="padding-left:20px;">{{ .Params.Difficulty}}</td>
+						</tr>
+						<tr>
+							<th style="text-align:left; padding:8px 0px">Prep</th>
+							<td style="padding-left:20px;">{{ .Params.prepTime }} Mins</td>
+						</tr>
+						<tr>
+							<th style="text-align:left; padding:8px 0px">Serves</th>
+							<td style="padding-left:20px;">{{ .Params.Servings}}</td>
+						</tr>
+					</table>
+				</div>
+				<div>
+					<h2>Ingredients</h2>
+					<ul class="standard-list">
+						{{ range .Params.ingredients}}
+							<li>{{.}}</li>
+						{{ end }}
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<ul class="col-md-6">
+				<h2>How To Make</h2>
+
+				{{ range .Params.steps}}
+					<li>
+						<h3>Step {{ .step }}</h3>
+						<p>{{ .stepDescription }}</p>
+					</li>
+				{{ end }}
+
+			</ul>
+
+			<div class="col-md-6">
+				<h2>You Might Also Like</h2>
+				<div class="row">
+				    {{ range first 4 (where .Site.RegularPages "Section" "recipes") }}
+				        <div class="col-xs-6 col-sm-6 marb_d">
+				        	<a href="{{.Permalink}}">
+				        		<img src="/images/smoothie-image.png" class="marb_h" />
+				        	</a>
+				            <a href="{{.Permalink}}">{{.Title}}</a>
+				        </div>
+				    {{ end }}
+				</div>
+			</div>
+		</div>
+{{ end }}

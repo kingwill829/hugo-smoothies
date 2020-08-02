@@ -1,0 +1,30 @@
+* {
+	font-family:$body-font;
+}
+h1,h2,h3 {
+	font-family:$heading-font;
+}
+
+
+/* Lists */
+ul {
+	padding:0px;
+	}
+
+li {
+	list-style:none;
+}
+.standard-list li {
+    padding-left: 25px;
+    text-indent: -.7em;
+    line-height: 1.4em;
+    padding-bottom:$baseline/2;
+}
+.standard-list li:last-child {
+	padding-bottom:0px;
+}
+.standard-list li:before {
+    content: '\025CB';
+    color: red;
+    padding-right: 5px;
+}
