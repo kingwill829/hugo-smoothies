@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Recipes on Simple Smoothies</title>
-    <link>/recipes/</link>
+    <link>https://simple-smoothies.netlify.app/recipes/</link>
     <description>Recent content in Recipes on Simple Smoothies</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 15 Jul 2020 00:07:41 +0100</lastBuildDate>
     
-	<atom:link href="/recipes/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://simple-smoothies.netlify.app/recipes/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Peanut Butter Monster</title>
-      <link>/recipes/peanut-butter/</link>
+      <link>https://simple-smoothies.netlify.app/recipes/peanut-butter/</link>
       <pubDate>Wed, 15 Jul 2020 00:07:41 +0100</pubDate>
       
-      <guid>/recipes/peanut-butter/</guid>
+      <guid>https://simple-smoothies.netlify.app/recipes/peanut-butter/</guid>
       <description></description>
     </item>
     
