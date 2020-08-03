@@ -8,7 +8,20 @@
     {{ range (where .Site.RegularPages "Section" "recipes") }}
         <div class="col-xs-6 col-sm-6 col-md-3 marb_d">
         	<a href="{{.Permalink}}">
-        		<img src="/images/smoothie-image.png" class="marb_h" />
+                {{ $imageTest := .Params.mainImage }}
+                {{ $src := .Resources.GetMatch (.Params.mainImage)  }}
+                
+                {{ $tinyw := default "500x" }}
+
+                {{/* resize the src image to the given sizes */}}
+
+                {{ .Scratch.Set "tiny" ($src.Resize $tinyw) }}
+
+                {{/* add the processed images to the scratch */}}
+
+                {{ $tiny := .Scratch.Get "tiny" }}
+
+        		<img src="{{$tiny.RelPermalink }}" class="marb_h" loading="lazy" />
         	</a>
             <a href="{{.Permalink}}">{{.Title}}</a>
         </div>

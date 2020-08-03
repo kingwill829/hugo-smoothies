@@ -41,7 +41,35 @@
 
 		<div class="row">
 			<div class="col-md-6">
-				<img src="/images/smoothie-image.png" />
+				{{ $imageTest := .Params.mainImage }}
+				{{ $src := .Resources.GetMatch (.Params.mainImage)  }}
+				
+				{{ $tinyw := default "500x" }}
+				{{ $smallw := default "800x" }}
+				{{ $mediumw := default "1200x" }}
+				{{ $largew := default "1500x" }}
+
+				{{/* resize the src image to the given sizes */}}
+
+				{{ .Scratch.Set "tiny" ($src.Resize $tinyw) }}
+				{{ .Scratch.Set "small" ($src.Resize $smallw) }}
+				{{ .Scratch.Set "medium" ($src.Resize $mediumw) }}
+				{{ .Scratch.Set "large" ($src.Resize $largew) }}
+
+				{{/* add the processed images to the scratch */}}
+
+				{{ $tiny := .Scratch.Get "tiny" }}
+				{{ $small := .Scratch.Get "small" }}
+				{{ $medium := .Scratch.Get "medium" }}
+				{{ $large := .Scratch.Get "large" }}
+
+
+				<picture>
+					<source srcset="{{$tiny.RelPermalink }}" media="(max-width:500px)">
+					<source srcset="{{$small.RelPermalink }}" media="(max-width:800px)">
+					<source srcset="{{$medium.RelPermalink }}" media="(max-width:1200px)">
+					<img src="{{$tiny.RelPermalink }}" alt="{{ .Title }}" loading="lazy" />
+				</picture>
 			</div>
 
 			<div class="col-md-6">
@@ -93,7 +121,7 @@
 				    {{ range first 4 (where .Site.RegularPages "Section" "recipes") }}
 				        <div class="col-xs-6 col-sm-6 marb_d">
 				        	<a href="{{.Permalink}}">
-				        		<img src="/images/smoothie-image.png" class="marb_h" />
+				        		<img src="/images/smoothie-image.png" class="marb_h" loading="lazy" />
 				        	</a>
 				            <a href="{{.Permalink}}">{{.Title}}</a>
 				        </div>

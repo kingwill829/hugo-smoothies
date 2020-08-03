@@ -10,6 +10,7 @@ metaDescription: "This quick and easy smoothie is packed full of protein to give
 
 mainDescription: "This quick and easy smoothie is packed full of protein to give you a simple post-workout recovery shake."
 
+mainImage: "smoothie-image.png"
 
 
 ingredients: ["1 banana", "1 tsp Peanut Butter", "1 Scoop Vanilla Protein Powder"]
