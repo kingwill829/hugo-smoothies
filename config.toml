@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://simple-smoothies.netlify.app/"
 languageCode = "en-us"
 title = "Simple Smoothies"
 theme = "simple_smoothies"
