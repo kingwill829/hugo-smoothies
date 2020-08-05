@@ -1,43 +1,4 @@
-
 {{ define "main" }}
-	<script type="application/ld+json">
-	{
-	  "@context": "https://schema.org/", 
-	  "@type": "Recipe", 
-	  "name": "{{ .Title }}",
-	  "image": "/images/smoothie-image.png",
-	  "description": "{{ .Params.mainDescription }}",
-	  "keywords": [{{ range $i, $e := .Params.keywords }}{{ if $i }}, {{ end }}
-	  	{{ $e }}{{ end }}
-	  ],
-	  "author": {
-	    "@type": "Person",
-	    "name": "Will Ling"
-	  },
-	  "datePublished": "{{ .Date }}",
-	  "prepTime": "PT{{ .Params.prepTime}}M",
-	  "cookTime": "PT{{ .Params.cookTime }}M", 
-	  "totalTime": "PT{{ $prepTime := int .Params.prepTime}} {{ $cookTime := int .Params.cookTime }} {{ add $prepTime $cookTime }}M", 
-	  "recipeYield": "{{ .Params.Servings }}", 
-	  "nutrition": {
-	    "@type": "NutritionInformation",
-	    "calories": "{{ .Params.Nutrition.Calories }}",
-	    "fatContent": "{{ .Params.Nutrition.Fat }}"
-	  },
-	  "recipeIngredient": [{{ range $i, $e := .Params.ingredients }}{{ if $i }}, {{ end }}
-	  	{{ $e }}{{ end }}
-	  ],
-	  "recipeInstructions": [
-	  
-	  {{ $steps := .Params.steps }}
-	  {{ $len := len $steps }}
-	  {{ $counter := 1 }}
-	  {{ range $i, $e := .Params.steps}}
-	  {"@type": "HowToStep",
-	  	"text":"{{ .stepDescription}}"
-	  }{{ if (lt $counter $len) }},{{end}}{{ $counter = add $counter 1 }}{{end}}]  
-	}
-	</script>	
 
 		<div class="row">
 			<div class="col-md-6">
