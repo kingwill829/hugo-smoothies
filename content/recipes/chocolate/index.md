@@ -1,11 +1,11 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
-date: {{ .Date }}
+title: "Chocolate"
+date: 2020-08-10T23:32:30+01:00
 prepTime: 10
 cookTime: 5
 difficulty: "Medium"
 servings: "1"
-draft: true
+draft: false
 
 description: "Enter meta description here"
 

@@ -1,8 +1,9 @@
-baseURL = "https://simple-smoothies.netlify.app/"
+baseURL = "https://www.schmoothie.com"
 languageCode = "en-us"
 title = "Simple Smoothies"
 theme = "simple_smoothies"
 googleAnalytics = "UA-123-45"
+enableRobotsTXT = "TRUE"
 
 [menu]
 
