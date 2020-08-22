@@ -2,21 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Recipes on Simple Smoothies</title>
-    <link>https://simple-smoothies.netlify.app/recipes/</link>
+    <link>https://www.schmoothie.com/recipes/</link>
     <description>Recent content in Recipes on Simple Smoothies</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 Jul 2020 00:07:41 +0100</lastBuildDate>
+    <lastBuildDate>Mon, 10 Aug 2020 23:32:30 +0100</lastBuildDate>
     
-	<atom:link href="https://simple-smoothies.netlify.app/recipes/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.schmoothie.com/recipes/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Chocolate</title>
+      <link>https://www.schmoothie.com/recipes/chocolate/</link>
+      <pubDate>Mon, 10 Aug 2020 23:32:30 +0100</pubDate>
+      
+      <guid>https://www.schmoothie.com/recipes/chocolate/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Peanut Butter Monster</title>
-      <link>https://simple-smoothies.netlify.app/recipes/peanut-butter/</link>
+      <link>https://www.schmoothie.com/recipes/peanut-butter/</link>
       <pubDate>Wed, 15 Jul 2020 00:07:41 +0100</pubDate>
       
-      <guid>https://simple-smoothies.netlify.app/recipes/peanut-butter/</guid>
+      <guid>https://www.schmoothie.com/recipes/peanut-butter/</guid>
       <description></description>
     </item>
     

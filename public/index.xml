@@ -2,49 +2,67 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Simple Smoothies</title>
-    <link>https://simple-smoothies.netlify.app/</link>
+    <link>https://www.schmoothie.com/</link>
     <description>Recent content on Simple Smoothies</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 12 Jul 2020 23:17:24 +0100</lastBuildDate>
     
-	<atom:link href="https://simple-smoothies.netlify.app/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.schmoothie.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Chocolate</title>
+      <link>https://www.schmoothie.com/recipes/chocolate/</link>
+      <pubDate>Mon, 10 Aug 2020 23:32:30 +0100</pubDate>
+      
+      <guid>https://www.schmoothie.com/recipes/chocolate/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Contact</title>
-      <link>https://simple-smoothies.netlify.app/contact/</link>
+      <link>https://www.schmoothie.com/contact/</link>
       <pubDate>Mon, 27 Jul 2020 21:25:11 +0100</pubDate>
       
-      <guid>https://simple-smoothies.netlify.app/contact/</guid>
+      <guid>https://www.schmoothie.com/contact/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Peanut Butter Monster</title>
-      <link>https://simple-smoothies.netlify.app/recipes/peanut-butter/</link>
+      <link>https://www.schmoothie.com/recipes/peanut-butter/</link>
       <pubDate>Wed, 15 Jul 2020 00:07:41 +0100</pubDate>
       
-      <guid>https://simple-smoothies.netlify.app/recipes/peanut-butter/</guid>
+      <guid>https://www.schmoothie.com/recipes/peanut-butter/</guid>
       <description></description>
     </item>
     
     <item>
       <title>About</title>
-      <link>https://simple-smoothies.netlify.app/page/about/</link>
+      <link>https://www.schmoothie.com/page/about/</link>
       <pubDate>Fri, 03 Apr 2015 02:13:50 +0000</pubDate>
       
-      <guid>https://simple-smoothies.netlify.app/page/about/</guid>
+      <guid>https://www.schmoothie.com/page/about/</guid>
       <description>Welcome to Simple Smoothies. We provide tasty, nutritious and easy-to-make smoothie recipes.</description>
     </item>
     
     <item>
       <title>Contact</title>
-      <link>https://simple-smoothies.netlify.app/page/contact/</link>
+      <link>https://www.schmoothie.com/page/contact/</link>
       <pubDate>Fri, 03 Apr 2015 02:13:50 +0000</pubDate>
       
-      <guid>https://simple-smoothies.netlify.app/page/contact/</guid>
+      <guid>https://www.schmoothie.com/page/contact/</guid>
       <description>Contact Aenean ipsum justo, semper eu nisl ut, pretium tincidunt sem. Praesent et diam sit amet lacus lobortis dictum a id lacus. Quisque hendrerit sit amet turpis eu varius. Ut id lorem ac felis ultrices tincidunt. Pellentesque consequat arcu ac fringilla imperdiet. Phasellus pellentesque, sapien non pulvinar blandit, sapien ante aliquet felis, vel porttitor sapien ante in lacus. Fusce non urna aliquet, malesuada nibh vel, luctus urna. Phasellus ut lacus molestie, varius purus quis, malesuada lorem.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.schmoothie.com/404/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.schmoothie.com/404/</guid>
+      <description></description>
     </item>
     
   </channel>
